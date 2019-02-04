@@ -1,0 +1,71 @@
+/*Objective
+Define the problem by constructing an algorithm using pseudocode
+What control structures (sequence, selection and repetition) are required?
+What variables are required?
+Show a check of your solution with test data for at least two valid test cases
+1. Create a basic application
+Your 6 year old client needs an application that will receive an integer from the user banging on the keyboard, add 5 to it, double it, subtract 7 from it, and display the result to the screen.
+2. Add three numbers and print the total
+His little sister now wants a program to read three numbers, add them together and print their total.
+3. Find the average score
+A program is needed to prompt the user operator for ten exam scores, calculate the average score and display the result to the screen. The average score is calculated as the sum of the scores divided by the number of scores.
+4. How much water runs off the roof
+How much water runs off a roof in a rain storm?
+To calculate the runoff from any given rainfall: Take the dimensions of the footprint of the roof and convert them to inches. (So, a 50' x 20' roof is 600" x 240"). 
+Multiply the roof dimensions by the number of inches of rainfall. In this example, 600" x 240" x 1" = 144,000 cubic inches of water. 
+Divide that result by 231 to get the number of gallons (because 1 gallon = 231 cubic inches). (144,000/231 = 623.38).
+Write the pseudocode for the above problem. If you use the numbers provided in the example then the correct pseudocode will calculate the same result.
+*/
+
+Pseudocode for Basic Application:
+
+1.  Initialize num;
+	Open Scanner;
+	Scan num = NextInt();
+	close scanner;
+    num = num + 5;
+	num = num * 2;
+	num = num - 7;
+	Output num;
+	
+2. Initialize num1, num2, and num3;
+   Initialize sum;
+   Open Scanner;
+   Output print ("Enter three numbers");
+   Scan num1, num2, num3 = nextInt();
+   sum = num1 + num2 + num3;
+   Output sum;
+   
+3. Initialize num1, num2, and num3, num4, num5, num6, num7, num8, num9, num10;
+   Initialize sum, avg;
+   Open Scanner;
+   Output print ("Enter ten exam scores");
+   Scan num1, num2, num3, num4, num5, num6, num7, num8, num9, num10 = nextInt();
+   sum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
+   avg = sum /10;
+   Output avg;
+   
+4. Initialize double roof_length, double roof_width, int system_choice;
+   Initialize double rainfall, water_runoff;
+   Output print (Choose 1.metric or 2.English system);
+   Scan system_choice = nextInt();
+   if Metric then
+	{
+	Output print ("Enter dimensions of roof in metric system in cm");
+	Scan roof_length = nextDouble();
+	Scan roof_width = nextDouble();
+	Convert roof_length to English roof_length = roof_length / 2.54;
+    Convert roof_width to English  roof_width = roof_width /2.54;
+	}
+	else if English then
+	Output print ("Enter dimensions of roof in English system in inches");
+	Scan roof_length = nextDouble();
+	Scan roof_width = nextDouble();	
+    }
+	
+   Output print ("Enter number of inches of rainfall:");
+   Scan rainfall = nextDouble();
+   water_runoff = (roof_length x roof_width x rainfall) / 231;
+   Output print ("Water runoff in gallons is" + water_runoff);
+   
+   
